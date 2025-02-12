@@ -9,3 +9,7 @@ Une application web simple pour aider les élèves de 2e année du Québec à pr
 - Suivi du score
 - Interface bilingue (français)
 - Fonctionne entièrement dans le navigateur (pas de serveur requis)
+
+## 🚀 Démarrage rapide
+
+1. Clonez ce dépôt :
