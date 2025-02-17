@@ -8,154 +8,376 @@ import { Alert, AlertDescription } from '../components/ui/alert';
 const readings = [
   {
     id: 1,
-    title: "Le grizzli : un géant de la forêt",
-    icon: "🐻",
+    title: "La compétition d'escalade",
+    icon: "🧗",
     passage: `
-      Le grizzli est un grand mammifère qui vit dans les forêts et les montagnes. Sa fourrure peut être brune ou dorée. On reconnaît facilement sa face large et joufflue.
-      Avec ses puissantes pattes avant, il creuse la terre à la recherche de racines. Ses griffes sont longues, courbées et très solides.
+      C'est la première fois que Léo participe à une compétition d'escalade. Dans le gymnase, des murs colorés s'élèvent jusqu'au plafond, couverts de prises de différentes formes.
+      Avant de grimper, chaque participant a cinq minutes pour étudier sa voie. Léo observe attentivement les prises bleues qu'il devra utiliser. Son entraîneuse lui rappelle de bien respirer.
       
-      Ce géant a un sens de l'odorat incroyable. Il peut sentir la nourriture à plusieurs kilomètres ! Sa vue est semblable à celle d'un humain, mais son ouïe est plus fine.
-      Au printemps, on le voit souvent se gratter contre les arbres pour perdre sa vieille fourrure.
+      Les grimpeurs ne peuvent pas voir les autres concurrents avant leur tour. Ils attendent dans une salle spéciale qu'on appelle la zone d'isolation. Là-bas, Léo s'échauffe et révise ses techniques.
       
-      Bien qu'il aime les poissons, surtout les saumons, le grizzli mange aussi des plantes, des baies et même des insectes comme les coccinelles. Il est donc omnivore.
-      L'hiver, il ne dort pas tout le temps : il sort parfois de sa tanière pour explorer.
-      Enfin, c'est un animal solitaire. Il préfère marcher seul, sauf quand une maman grizzli veille sur ses petits.
+      Quand c'est son tour, Léo attache son baudrier de sécurité et vérifie deux fois ses nœuds. Une fois sur le mur, il prend son temps, cherchant les meilleures positions pour ses pieds.
+      
+      À mi-chemin, il trouve un endroit pour reposer ses bras : une prise large qu'on appelle un repos. De là-haut, il entend les encouragements de ses coéquipiers.
     `,
     questions: [
-      { 
-        id: 1, 
-        text: "Le grizzli creuse avec ses pattes arrière.", 
-        answer: false, 
-        highlight: "Avec ses puissantes pattes avant, il creuse la terre à la recherche de racines"
+      {
+        id: 1,
+        text: "Les grimpeurs peuvent regarder les autres participants avant leur tour.",
+        answer: false,
+        highlight: "Les grimpeurs ne peuvent pas voir les autres concurrents avant leur tour"
       },
-      { 
-        id: 2, 
-        text: "Il peut sentir la nourriture de très loin.", 
-        answer: true, 
-        highlight: "Il peut sentir la nourriture à plusieurs kilomètres"
+      {
+        id: 2,
+        text: "Léo peut utiliser toutes les prises sur le mur.",
+        answer: false,
+        highlight: "Léo observe attentivement les prises bleues qu'il devra utiliser"
       },
-      { 
-        id: 3, 
-        text: "Il mange uniquement du poisson.", 
-        answer: false, 
-        highlight: "le grizzli mange aussi des plantes, des baies et même des insectes"
+      {
+        id: 3,
+        text: "Les participants ont le temps d'étudier leur parcours avant de grimper.",
+        answer: true,
+        highlight: "chaque participant a cinq minutes pour étudier sa voie"
       },
-      { 
-        id: 4, 
-        text: "Il ne dort jamais en hiver.", 
-        answer: false, 
-        highlight: "L'hiver, il ne dort pas tout le temps : il sort parfois de sa tanière"
+      {
+        id: 4,
+        text: "Un repos est un moment où l'on descend du mur.",
+        answer: false,
+        highlight: "une prise large qu'on appelle un repos"
       },
-      { 
-        id: 5, 
-        text: "C'est un animal qui aime être seul.", 
-        answer: true, 
-        highlight: "c'est un animal solitaire"
+      {
+        id: 5,
+        text: "La sécurité est vérifiée plusieurs fois avant de grimper.",
+        answer: true,
+        highlight: "attache son baudrier de sécurité et vérifie deux fois ses nœuds"
       }
     ]
   },
   {
     id: 2,
-    title: "L'érable à sucre : l'arbre du Québec",
-    icon: "🍁",
+    title: "Le club de robotique",
+    icon: "🤖",
     passage: `
-      L'érable à sucre est un arbre spécial au Québec. Au printemps, quand la neige commence à fondre, la sève sucrée monte dans son tronc.
-      Les érables peuvent devenir très grands, jusqu'à 40 mètres de haut ! Leurs feuilles sont magnifiques : vertes en été et rouge vif en automne.
+      Tous les mercredis après l'école, Malik retrouve ses amis au club de robotique. Dans la bibliothèque transformée en atelier, des boîtes de pièces colorées attendent les jeunes inventeurs.
+      Cette semaine, ils construisent un robot qui peut suivre une ligne noire sur le sol. Malik a dessiné les plans pendant que sa coéquipière Emma a programmé les capteurs.
       
-      Pour récolter le sirop, on fait un petit trou dans l'arbre. On y met une chaudière pour recueillir l'eau d'érable. Cette eau est transparente et un peu sucrée.
-      Dans la cabane à sucre, on fait bouillir l'eau d'érable. Elle devient alors du délicieux sirop doré. Il faut beaucoup d'eau pour faire un peu de sirop !
+      Leur professeure, madame Tremblay, leur montre comment les robots sont utilisés dans la vraie vie. Par exemple, dans les hôpitaux, des robots transportent les médicaments et le matériel médical.
       
-      Les Premières Nations ont appris aux premiers colons comment récolter cette sève. Aujourd'hui, le Québec est le plus grand producteur de sirop d'érable au monde.
-      On utilise le sirop pour faire de la tire d'érable, du beurre d'érable et même des bonbons à l'érable.
+      Le plus difficile est de faire tourner le robot aux coins. Emma a trouvé la solution : il faut que le robot ralentisse avant de tourner, comme une personne qui marche.
+      
+      À la fin du trimestre, il y aura une exposition où tous les robots du club seront présentés. Les parents pourront voir les inventions, et chaque équipe expliquera comment son robot fonctionne.
     `,
     questions: [
       {
         id: 1,
-        text: "On récolte le sirop d'érable en été.",
+        text: "Le club de robotique se réunit dans une salle de classe.",
         answer: false,
-        highlight: "Au printemps, quand la neige commence à fondre, la sève sucrée monte dans son tronc"
+        highlight: "Dans la bibliothèque transformée en atelier"
       },
       {
         id: 2,
-        text: "L'eau d'érable est dorée quand elle sort de l'arbre.",
-        answer: false,
-        highlight: "Cette eau est transparente et un peu sucrée"
+        text: "Malik et Emma se sont partagé les tâches différemment.",
+        answer: true,
+        highlight: "Malik a dessiné les plans pendant que sa coéquipière Emma a programmé les capteurs"
       },
       {
         id: 3,
-        text: "Le Québec produit plus de sirop d'érable que tous les autres endroits.",
+        text: "Les robots dans les hôpitaux servent à soigner les patients.",
+        answer: false,
+        highlight: "dans les hôpitaux, des robots transportent les médicaments et le matériel médical"
+      },
+      {
+        id: 4,
+        text: "Le robot doit ralentir dans les virages pour bien fonctionner.",
         answer: true,
-        highlight: "le Québec est le plus grand producteur de sirop d'érable au monde"
+        highlight: "il faut que le robot ralentisse avant de tourner, comme une personne qui marche"
+      },
+      {
+        id: 5,
+        text: "Les élèves devront seulement montrer leurs robots à l'exposition.",
+        answer: false,
+        highlight: "chaque équipe expliquera comment son robot fonctionne"
       }
     ]
   },
   {
     id: 3,
-    title: "Le renard roux en hiver",
-    icon: "🦊",
+    title: "La bibliothèque de jeux vidéo",
+    icon: "🎮",
     passage: `
-      Le renard roux est un animal très malin qui vit dans nos forêts. En hiver, sa fourrure devient plus épaisse pour le garder au chaud.
-      Son pelage roux l'aide à se cacher dans les feuilles mortes. Ses oreilles pointues bougent dans toutes les directions pour entendre les petits animaux.
+      La bibliothèque du quartier a une nouvelle section : des jeux vidéo éducatifs ! Camille découvre que ces jeux sont très différents de ceux auxquels elle joue d'habitude.
+      Dans un jeu de construction, elle doit résoudre des problèmes de mathématiques pour débloquer de nouvelles pièces. Plus elle résout de problèmes, plus elle peut construire des structures complexes.
       
-      Même sous la neige, le renard peut entendre une souris ! Il saute alors et plonge son museau dans la neige pour l'attraper.
-      Sa longue queue touffue lui sert de couverture quand il dort et de balancier quand il court et saute.
+      Son jeu préféré est un simulateur de ville où il faut gérer un budget. Elle apprend à économiser l'argent virtuel pour construire des parcs, des écoles et même un système de recyclage.
       
-      Le renard vit dans un terrier. C'est comme une petite maison creusée dans la terre. Il y garde ses petits au chaud et à l'abri.
-      Les bébés renards, qu'on appelle des renardeaux, naissent au printemps. Ils adorent jouer ensemble près du terrier.
+      La bibliothécaire explique qu'on peut emprunter trois jeux pour deux semaines. Mais attention : il faut d'abord finir ses devoirs ! Les parents doivent signer une fiche de permission.
+      
+      Chaque mois, il y a un tournoi où les enfants partagent leurs créations et leurs stratégies. Le mois dernier, Camille a montré comment elle a construit une ville écologique.
     `,
     questions: [
       {
         id: 1,
-        text: "Le renard a la même fourrure toute l'année.",
+        text: "Les enfants peuvent emprunter autant de jeux qu'ils veulent.",
         answer: false,
-        highlight: "En hiver, sa fourrure devient plus épaisse pour le garder au chaud"
+        highlight: "on peut emprunter trois jeux pour deux semaines"
       },
       {
         id: 2,
-        text: "Le renard peut trouver des souris sous la neige.",
+        text: "Dans le jeu de construction, il faut faire des calculs.",
         answer: true,
-        highlight: "Même sous la neige, le renard peut entendre une souris"
+        highlight: "elle doit résoudre des problèmes de mathématiques pour débloquer de nouvelles pièces"
       },
       {
         id: 3,
-        text: "Les bébés renards s'appellent des renardeaux.",
+        text: "Les parents doivent donner leur autorisation.",
         answer: true,
-        highlight: "Les bébés renards, qu'on appelle des renardeaux"
+        highlight: "Les parents doivent signer une fiche de permission"
+      },
+      {
+        id: 4,
+        text: "Le simulateur de ville sert uniquement à construire des bâtiments.",
+        answer: false,
+        highlight: "un simulateur de ville où il faut gérer un budget"
+      },
+      {
+        id: 5,
+        text: "Les tournois servent à gagner contre les autres joueurs.",
+        answer: false,
+        highlight: "les enfants partagent leurs créations et leurs stratégies"
       }
     ]
   },
   {
     id: 4,
-    title: "Une journée à la cabane à sucre",
-    icon: "🏡",
+    title: "Le jardin communautaire",
+    icon: "🌱",
     passage: `
-      C'est samedi et toute la famille va à la cabane à sucre ! Dans la voiture, Léa et son petit frère Thomas sont très excités.
-      À leur arrivée, ils sentent tout de suite la bonne odeur du sirop chaud. Le propriétaire leur montre les seaux accrochés aux érables.
+      Dans le quartier Saint-Roch, il y a un grand jardin où tout le monde peut cultiver des légumes. Chaque famille a son petit carré de terre.
+      Sofia et son papa ont choisi de planter des tomates cerises, des carottes et des fines herbes. Ils ont aussi ajouté des fleurs mauves pour attirer les papillons.
       
-      Pour le dîner, ils mangent des mets traditionnels : des œufs dans le sirop, du jambon, des fèves au lard et des oreilles de crisse.
-      Dehors, il y a de la neige propre. On y verse du sirop chaud qui devient de la tire d'érable. C'est délicieux sur un bâtonnet !
+      Leur voisine de jardin, madame Chen, cultive des légumes qu'on ne trouve pas souvent à l'épicerie. Elle leur a fait goûter des pois mange-tout et leur a expliqué comment les faire grimper sur des ficelles.
       
-      Après le repas, toute la famille monte dans une calèche tirée par un gros cheval. Ils font une belle promenade dans les sentiers enneigés.
-      À la fin de la journée, Léa achète une petite bouteille de sirop pour sa grand-maman. Thomas, lui, choisit des bonbons à l'érable.
+      Deux fois par semaine, les jardiniers utilisent un grand réservoir d'eau de pluie pour arroser leurs plantes. Sofia a appris que l'eau de pluie est meilleure que celle du robinet pour les légumes.
+      
+      À la fin de l'été, tous les jardiniers organisent une grande fête. Chacun prépare un plat avec ses récoltes. Sofia a hâte de faire goûter sa sauce aux tomates cerises !
     `,
     questions: [
       {
         id: 1,
-        text: "La famille va à la cabane à sucre un soir.",
+        text: "Les jardiniers doivent utiliser l'eau du robinet pour leurs plantes.",
         answer: false,
-        highlight: "C'est samedi et toute la famille va à la cabane à sucre"
+        highlight: "les jardiniers utilisent un grand réservoir d'eau de pluie pour arroser leurs plantes"
       },
       {
         id: 2,
-        text: "On fait la tire d'érable sur la neige.",
-        answer: true,
-        highlight: "Dehors, il y a de la neige propre. On y verse du sirop chaud qui devient de la tire d'érable"
+        text: "Madame Chen cultive les mêmes légumes que tout le monde.",
+        answer: false,
+        highlight: "madame Chen cultive des légumes qu'on ne trouve pas souvent à l'épicerie"
       },
       {
         id: 3,
-        text: "La famille fait une promenade à pied dans les sentiers.",
+        text: "Sofia et son père ont planté des fleurs seulement pour leur beauté.",
         answer: false,
-        highlight: "toute la famille monte dans une calèche tirée par un gros cheval"
+        highlight: "Ils ont aussi ajouté des fleurs mauves pour attirer les papillons"
+      },
+      {
+        id: 4,
+        text: "Les pois mange-tout poussent en grimpant.",
+        answer: true,
+        highlight: "leur a expliqué comment les faire grimper sur des ficelles"
+      },
+      {
+        id: 5,
+        text: "Chaque famille peut cultiver où elle veut dans le jardin.",
+        answer: false,
+        highlight: "Chaque famille a son petit carré de terre"
+      }
+    ]
+  },
+  {
+    id: 5,
+    title: "Le club de sciences",
+    icon: "🔬",
+    passage: `
+      Le club de sciences expérimente aujourd'hui avec l'air et l'eau. Sarah et ses amis ont installé trois stations différentes pour leurs expériences.
+      À la première station, ils créent des bulles géantes avec une solution spéciale. En ajoutant du glycérol à l'eau savonneuse, les bulles deviennent plus résistantes et durent plus longtemps.
+      
+      La deuxième station teste la flottaison. Les élèves découvrent que certains objets flottent dans l'eau salée mais coulent dans l'eau normale. Ils notent leurs observations dans un carnet.
+      
+      À la dernière station, ils fabriquent une mini-tornade dans une bouteille. En mélangeant de l'eau avec du colorant et en faisant tourner la bouteille, ils créent un tourbillon impressionnant.
+      
+      Chaque équipe doit présenter une hypothèse avant chaque expérience et expliquer si leurs prédictions étaient correctes.
+    `,
+    questions: [
+      {
+        id: 1,
+        text: "Le glycérol sert à faire des bulles plus grosses.",
+        answer: false,
+        highlight: "En ajoutant du glycérol à l'eau savonneuse, les bulles deviennent plus résistantes et durent plus longtemps"
+      },
+      {
+        id: 2,
+        text: "L'eau salée change la façon dont les objets flottent.",
+        answer: true,
+        highlight: "certains objets flottent dans l'eau salée mais coulent dans l'eau normale"
+      },
+      {
+        id: 3,
+        text: "Les élèves font leurs expériences sans préparation.",
+        answer: false,
+        highlight: "Chaque équipe doit présenter une hypothèse avant chaque expérience"
+      },
+      {
+        id: 4,
+        text: "La mini-tornade se forme toute seule dans la bouteille.",
+        answer: false,
+        highlight: "en faisant tourner la bouteille, ils créent un tourbillon"
+      },
+      {
+        id: 5,
+        text: "Les élèves vérifient si leurs prédictions étaient justes.",
+        answer: true,
+        highlight: "expliquer si leurs prédictions étaient correctes"
+      }
+    ]
+  },
+  {
+    id: 6,
+    title: "L'atelier de bande dessinée",
+    icon: "📚",
+    passage: `
+      Dans l'atelier de bande dessinée, Lucas apprend que créer une histoire n'est pas aussi simple qu'il pensait. L'animatrice explique qu'il faut d'abord faire un scénario avant de dessiner.
+      Pour commencer, chaque élève crée une fiche pour son personnage principal. Lucas dessine une jeune inventrice qui transforme des objets ordinaires en machines extraordinaires.
+      
+      L'animatrice montre différentes façons de diviser la page en cases. Les grandes cases servent pour les moments importants, alors que les petites cases montrent les actions rapides.
+      Pour les dialogues, on utilise des bulles de différentes formes : rondes pour parler normalement, en nuage pour les pensées, et en éclair pour crier.
+      
+      Lucas découvre aussi l'importance des expressions du visage. Un simple changement dans les sourcils ou la bouche peut montrer si son personnage est content, surpris ou inquiet.
+    `,
+    questions: [
+      {
+        id: 1,
+        text: "On peut commencer à dessiner sans faire de scénario.",
+        answer: false,
+        highlight: "il faut d'abord faire un scénario avant de dessiner"
+      },
+      {
+        id: 2,
+        text: "Toutes les bulles de dialogue ont la même forme.",
+        answer: false,
+        highlight: "on utilise des bulles de différentes formes : rondes pour parler normalement, en nuage pour les pensées, et en éclair pour crier"
+      },
+      {
+        id: 3,
+        text: "Les grandes cases sont utilisées pour les moments importants.",
+        answer: true,
+        highlight: "Les grandes cases servent pour les moments importants"
+      },
+      {
+        id: 4,
+        text: "Le personnage de Lucas est un super-héros.",
+        answer: false,
+        highlight: "Lucas dessine une jeune inventrice qui transforme des objets ordinaires en machines extraordinaires"
+      },
+      {
+        id: 5,
+        text: "Les expressions du visage aident à comprendre les émotions.",
+        answer: true,
+        highlight: "Un simple changement dans les sourcils ou la bouche peut montrer si son personnage est content, surpris ou inquiet"
+      }
+    ]
+  },
+  {
+    id: 7,
+    title: "Une partie de soccer sous la pluie",
+    icon: "⚽",
+    passage: `
+      L'équipe de Yasmine doit jouer un match important, même s'il pleut depuis ce matin. Le terrain est glissant, et les joueurs doivent adapter leur façon de jouer.
+      L'entraîneuse explique qu'il faut faire des passes plus courtes aujourd'hui. Le ballon roule différemment sur l'herbe mouillée, et il est plus difficile à contrôler quand il arrive trop vite.
+      
+      Dans les buts, Antoine porte des gants spéciaux qui gardent leur adhérence même sous la pluie. Il doit aussi être plus attentif car le ballon peut changer de direction dans les flaques d'eau.
+      
+      À la mi-temps, toute l'équipe change de chandail. L'entraîneuse leur donne aussi des conseils pour économiser leur énergie, car courir dans la boue est plus fatigant que d'habitude.
+      
+      Finalement, le match se termine par un match nul. Yasmine est fière de son équipe : ils ont su s'adapter aux conditions difficiles, et personne n'a abandonné malgré la pluie.
+    `,
+    questions: [
+      {
+        id: 1,
+        text: "Le match a été annulé à cause de la pluie.",
+        answer: false,
+        highlight: "L'équipe de Yasmine doit jouer un match important, même s'il pleut depuis ce matin"
+      },
+      {
+        id: 2,
+        text: "Les joueurs font les mêmes passes que d'habitude.",
+        answer: false,
+        highlight: "il faut faire des passes plus courtes aujourd'hui. Le ballon roule différemment sur l'herbe mouillée"
+      },
+      {
+        id: 3,
+        text: "Le gardien de but utilise un équipement particulier pour la pluie.",
+        answer: true,
+        highlight: "Antoine porte des gants spéciaux qui gardent leur adhérence même sous la pluie"
+      },
+      {
+        id: 4,
+        text: "Les joueurs gardent les mêmes chandails tout le match.",
+        answer: false,
+        highlight: "À la mi-temps, toute l'équipe change de chandail"
+      },
+      {
+        id: 5,
+        text: "Jouer dans la boue demande plus d'efforts.",
+        answer: true,
+        highlight: "courir dans la boue est plus fatigant que d'habitude"
+      }
+    ]
+  },
+  {
+    id: 8,
+    title: "La murale collective",
+    icon: "🎨",
+    passage: `
+      Les élèves de l'école ont décidé de transformer le mur gris de la cour en une œuvre d'art colorée. Avant de commencer à peindre, ils ont voté pour choisir le thème : la nature en ville.
+      Chaque classe est responsable d'une partie différente. La classe de Zoé dessine les arbres et les fleurs, pendant que d'autres groupes ajoutent des oiseaux, des papillons et même des jardins sur les balcons.
+      
+      Une artiste du quartier, Maria, leur montre comment mélanger les couleurs pour créer de nouvelles teintes. Elle explique aussi qu'il faut d'abord faire un croquis au crayon avant d'appliquer la peinture.
+      
+      Pour que la peinture ne coule pas, les élèves commencent par le haut du mur et descendent progressivement. Ils utilisent des pinceaux de différentes tailles : les gros pour le fond, les fins pour les détails.
+      
+      À la fin du projet, chaque élève signe son nom dans un petit coin. Maintenant, quand les parents viennent chercher leurs enfants, ils s'arrêtent pour admirer cette création collective.
+    `,
+    questions: [
+      {
+        id: 1,
+        text: "Les élèves ont commencé à peindre dès le premier jour.",
+        answer: false,
+        highlight: "Avant de commencer à peindre, ils ont voté pour choisir le thème"
+      },
+      {
+        id: 2,
+        text: "Toutes les classes travaillent sur la même partie du mur.",
+        answer: false,
+        highlight: "Chaque classe est responsable d'une partie différente"
+      },
+      {
+        id: 3,
+        text: "Les élèves peignent de haut en bas pour éviter les coulures.",
+        answer: true,
+        highlight: "Pour que la peinture ne coule pas, les élèves commencent par le haut du mur et descendent progressivement"
+      },
+      {
+        id: 4,
+        text: "Les gros et petits pinceaux servent au même usage.",
+        answer: false,
+        highlight: "les gros pour le fond, les fins pour les détails"
+      },
+      {
+        id: 5,
+        text: "L'artiste Maria vient de l'école.",
+        answer: false,
+        highlight: "Une artiste du quartier, Maria"
       }
     ]
   }
