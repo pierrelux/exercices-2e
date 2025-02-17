@@ -4,7 +4,7 @@ Petite collection d'exercices web que j'ai créée pour aider mon fils avec ses 
 
 ## 🌐 Les Exercices
 
-Disponible sur [pierrelucbacon.com/pfeq-arithmetique](https://pierrelucbacon.com/pfeq-arithmetique)
+Disponible sur [pierrelucbacon.com/exercices-2e](https://pierrelucbacon.com/exercices-2e)
 
 ### 1. Lecture
 - Textes courts avec questions vrai/faux

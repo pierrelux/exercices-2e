@@ -1,7 +1,7 @@
 {
-  "name": "pfeq-arithmetique",
+  "name": "exercices-2e",
   "private": true,
-  "homepage": "https://pierrelucbacon.com/pfeq-arithmetique",
+  "homepage": "https://pierrelucbacon.com/exercices-2e",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
