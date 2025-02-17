@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Alert, AlertDescription } from './ui/alert';
+import React, { useState } from 'react';  // Add useState to import
 
 const exercises = [
   {
@@ -153,109 +153,130 @@ const TermeManquantApp = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <Card className="w-full">
-        <CardHeader>
-          <CardTitle className="text-2xl font-bold">
-            Terme Manquant 🔍
+    <Card className="max-w-4xl mx-auto">
+      <CardHeader>
+        <div className="flex items-center justify-between">
+          <Button 
+            onClick={() => {
+              setCurrentExercise(currentExercise - 1);
+              setUserAnswers({ debut: '', milieu: '', fin: '' });
+              setShowResult(false);
+            }} 
+            disabled={currentExercise === 0}
+            variant="outline"
+          >
+            ← Précédent
+          </Button>
+          <CardTitle>
+            {exercises[currentExercise].title} 🔍
           </CardTitle>
-          <CardDescription>
-            Score: {score}/{exercises.length}
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <h2 className="text-xl font-semibold">
-              {exercises[currentExercise].title}
-            </h2>
-            <p className="text-gray-600">
-              {exercises[currentExercise].text}
-            </p>
-            <p className="font-medium mt-4">
-              💡 {exercises[currentExercise].question}
-            </p>
-          </div>
+          <Button 
+            onClick={() => {
+              setCurrentExercise(currentExercise + 1);
+              setUserAnswers({ debut: '', milieu: '', fin: '' });
+              setShowResult(false);
+            }} 
+            disabled={currentExercise === exercises.length - 1}
+            variant="outline"
+          >
+            Suivant →
+          </Button>
+        </div>
+        <CardDescription>Score: {score}/{exercises.length}</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="space-y-2">
+          <h2 className="text-xl font-semibold">
+            {exercises[currentExercise].title}
+          </h2>
+          <p className="text-gray-600">
+            {exercises[currentExercise].text}
+          </p>
+          <p className="font-medium mt-4">
+            💡 {exercises[currentExercise].question}
+          </p>
+        </div>
 
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-4">Histoire séquentielle</h3>
-            <div className="grid grid-cols-3 gap-4">
-              <div className="space-y-2">
-                <label className="font-medium">Début</label>
-                <Input
-                  type="number"
-                  value={userAnswers.debut}
-                  onChange={(e) => setUserAnswers({...userAnswers, debut: e.target.value})}
-                  placeholder="?"
-                  disabled={showResult}
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="font-medium">Milieu</label>
-                <Input
-                  type="number"
-                  value={userAnswers.milieu}
-                  onChange={(e) => setUserAnswers({...userAnswers, milieu: e.target.value})}
-                  placeholder="?"
-                  disabled={showResult}
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="font-medium">Fin</label>
-                <Input
-                  type="number"
-                  value={userAnswers.fin}
-                  onChange={(e) => setUserAnswers({...userAnswers, fin: e.target.value})}
-                  placeholder="?"
-                  disabled={showResult}
-                />
-              </div>
+        <div className="bg-gray-50 p-4 rounded-lg">
+          <h3 className="text-lg font-semibold mb-4">Histoire séquentielle</h3>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="space-y-2">
+              <label className="font-medium">Début</label>
+              <Input
+                type="number"
+                value={userAnswers.debut}
+                onChange={(e) => setUserAnswers({...userAnswers, debut: e.target.value})}
+                placeholder="?"
+                disabled={showResult}
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="font-medium">Milieu</label>
+              <Input
+                type="number"
+                value={userAnswers.milieu}
+                onChange={(e) => setUserAnswers({...userAnswers, milieu: e.target.value})}
+                placeholder="?"
+                disabled={showResult}
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="font-medium">Fin</label>
+              <Input
+                type="number"
+                value={userAnswers.fin}
+                onChange={(e) => setUserAnswers({...userAnswers, fin: e.target.value})}
+                placeholder="?"
+                disabled={showResult}
+              />
             </div>
           </div>
+        </div>
 
-          {!showResult && (
-            <Button 
-              onClick={handleSubmit}
-              disabled={!userAnswers.debut || !userAnswers.milieu || !userAnswers.fin}
+        {!showResult && (
+          <Button 
+            onClick={handleSubmit}
+            disabled={!userAnswers.debut || !userAnswers.milieu || !userAnswers.fin}
+            className="w-full"
+          >
+            Vérifier
+          </Button>
+        )}
+
+        {showResult && (
+          <div className="space-y-4">
+            <Alert variant={
+              Object.keys(userAnswers).every(
+                key => userAnswers[key] === exercises[currentExercise].terms[key]
+              ) ? "success" : "error"
+            }>
+              <AlertDescription>
+                {Object.keys(userAnswers).every(
+                  key => userAnswers[key] === exercises[currentExercise].terms[key]
+                ) 
+                  ? "🎉 Bravo ! Tu as trouvé tous les termes correctement !"
+                  : `❌ Ce n'est pas tout à fait ça. Les termes corrects sont : Début: ${exercises[currentExercise].terms.debut}, Milieu: ${exercises[currentExercise].terms.milieu}, Fin: ${exercises[currentExercise].terms.fin}`
+                }
+              </AlertDescription>
+            </Alert>
+            
+            <Button
+              onClick={nextExercise}
+              disabled={currentExercise === exercises.length - 1}
               className="w-full"
             >
-              Vérifier
+              Exercice suivant
             </Button>
-          )}
-
-          {showResult && (
-            <div className="space-y-4">
-              <Alert variant={
-                Object.keys(userAnswers).every(
-                  key => userAnswers[key] === exercises[currentExercise].terms[key]
-                ) ? "success" : "error"
-              }>
-                <AlertDescription>
-                  {Object.keys(userAnswers).every(
-                    key => userAnswers[key] === exercises[currentExercise].terms[key]
-                  ) 
-                    ? "🎉 Bravo ! Tu as trouvé tous les termes correctement !"
-                    : `❌ Ce n'est pas tout à fait ça. Les termes corrects sont : Début: ${exercises[currentExercise].terms.debut}, Milieu: ${exercises[currentExercise].terms.milieu}, Fin: ${exercises[currentExercise].terms.fin}`
-                  }
-                </AlertDescription>
-              </Alert>
-              
-              <Button
-                onClick={nextExercise}
-                disabled={currentExercise === exercises.length - 1}
-                className="w-full"
-              >
-                Exercice suivant
-              </Button>
-            </div>
-          )}
-        </CardContent>
-        <CardFooter>
-          <Button variant="outline" onClick={resetExercise} className="w-full">
-            Recommencer depuis le début
-          </Button>
-        </CardFooter>
-      </Card>
-    </div>
+          </div>
+        )}
+      </CardContent>
+      <CardFooter className="flex justify-between items-center w-full">
+        <p className="text-sm text-gray-500">Exercice {currentExercise + 1} sur {exercises.length}</p>
+        <Button variant="outline" className="ml-auto" onClick={resetExercise}>
+          Recommencer depuis le début
+        </Button>
+      </CardFooter>
+    </Card>
   );
 };
 

@@ -1,15 +1,26 @@
-# Pratique de Mathématiques - 2e année
+# Exercices pour mon fils (2e année)
 
-Une application web simple pour aider les élèves de 2e année du Québec à pratiquer leur raisonnement mathématique, alignée avec le Programme de formation de l'école québécoise.
+Petite collection d'exercices web que j'ai créée pour aider mon fils avec ses devoirs de 2e année. Les exercices sont basés sur le programme scolaire du Québec.
 
-## 🎯 Fonctionnalités
+## 🌐 Les Exercices
 
-- 10 exercices de raisonnement mathématique
-- Indices disponibles pour chaque problème
-- Suivi du score
-- Interface bilingue (français)
-- Fonctionne entièrement dans le navigateur (pas de serveur requis)
+Disponible sur [pierrelucbacon.com/pfeq-arithmetique](https://pierrelucbacon.com/pfeq-arithmetique)
 
-## 🚀 Démarrage rapide
+### 1. Lecture
+- Textes courts avec questions vrai/faux
+- Thèmes familiers (animaux du Québec, cabane à sucre)
+- Aide visuelle qui souligne les réponses dans le texte
 
-1. Clonez ce dépôt :
+### 2. Maths
+- Petits problèmes du quotidien
+- Additions et soustractions simples
+- Indices disponibles si besoin
+
+### 3. Séquences de nombres
+- Exercices pour comprendre les suites de nombres
+- Format simple (début-milieu-fin)
+- Histoires courtes et amusantes
+
+## 📝 License
+
+MIT License - Utilisez comme bon vous semble!

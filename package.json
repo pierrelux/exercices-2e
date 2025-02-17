@@ -1,7 +1,7 @@
 {
-  "name": "pfeq-2e-annee",
+  "name": "pfeq-arithmetique",
   "private": true,
-  "homepage": "https://pierre-luc.github.io/pfeq-2e-annee",
+  "homepage": "https://pierrelucbacon.com/pfeq-arithmetique",
   "version": "1.0.0",
   "type": "module",
   "scripts": {

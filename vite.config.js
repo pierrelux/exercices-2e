@@ -1,13 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
 
 export default defineConfig({
-  base: '/pfeq-2e-annee/',
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
+  base: '/pfeq-arithmetique/',  // Changed to match your actual repository name
+  plugins: [react()]
 })

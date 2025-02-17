@@ -2,10 +2,11 @@
 import React, { useState } from 'react';
 import MathPracticeApp from './MathPracticeApp';
 import TermeManquantApp from './TermeManquantApp';
+import ReadingPracticeApp from './ReadingPracticeApp';
 import { Button } from './ui/button';
 
 const App = () => {
-  const [currentApp, setCurrentApp] = useState('math'); // 'math' or 'terme'
+  const [currentApp, setCurrentApp] = useState('math'); // 'math', 'terme', or 'reading'
 
   return (
     <div className="container mx-auto p-4">
@@ -23,12 +24,21 @@ const App = () => {
           >
             Terme Manquant
           </Button>
+          <Button 
+            variant={currentApp === 'reading' ? 'default' : 'outline'}
+            onClick={() => setCurrentApp('reading')}
+          >
+            Compréhension de Lecture
+          </Button>
         </div>
 
-        {currentApp === 'math' ? <MathPracticeApp /> : <TermeManquantApp />}
+        {currentApp === 'math' && <MathPracticeApp />}
+        {currentApp === 'terme' && <TermeManquantApp />}
+        {currentApp === 'reading' && <ReadingPracticeApp />}
       </div>
     </div>
   );
 };
 
 export default App;
+
